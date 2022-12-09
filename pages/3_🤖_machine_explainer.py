@@ -14,6 +14,7 @@ st.image(
     width=100,
 )
 st.title("Machine Learning Model Explanation")
+st.caption("By Paul Weinberg, TJ Hamilton, and Brian Grant")
 path = os.path.join(os.path.dirname(__file__), "..")
 
 # IMPORTANCE ------------------------------------------------------------------

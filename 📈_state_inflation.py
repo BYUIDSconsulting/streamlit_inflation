@@ -225,6 +225,9 @@ st.subheader("Data")
 st.caption("**data is interpolated*")
 st.dataframe(state_inter)
 
+with st.expander("uninterpolated"):
+    st.dataframe(state_master)
+
 
 @st.cache
 def convert_df(df):
@@ -244,7 +247,7 @@ with col1:
 with col2:
     state_csv = convert_df(state_master)
     st.download_button(
-        label="Download CSV *(no interpolation)*",
+        label="Download CSV *(not interpolated)*",
         data=state_csv,
         file_name=f"{full_state}_uninterpolated.csv",
         mime="text/csv",
